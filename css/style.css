@@ -909,6 +909,12 @@ section#contact .say-hi svg {
 
 
 
+@media screen and (max-width: 600px) {
+    section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+}
 @media screen and (max-width: 576px) {}
 
 
