@@ -783,6 +783,12 @@ section#contact .say-hi svg {
 
 @media screen and (max-width: 767px) {
 
+    
+/* #cursor  */
+#cursor {
+    display: none;
+}
+
 
 
     section#banner h2 {
