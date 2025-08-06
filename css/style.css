@@ -341,9 +341,11 @@ section#banner .hero-image-1 {
     inset: 0% 0% 0% auto;
 }
 
-section#banner img{
-    clip-path: inset(0 0% 0 0);
+#banner img {
+    clip-path: inset(0 100% 0 0);
+    scale: 1.8;
 }
+
 section#banner .cover-image {
     object-fit: cover;
     width: 100%;

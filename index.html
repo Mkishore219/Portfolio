@@ -103,7 +103,8 @@
     <section id="introduction">
         <div class="container">
 
-            <h3 class="main-intro-txt">Hi, I'm a web developer based in India, crafting bold, innovative, and impactful designs that make a real difference.</h3>
+            <h3 class="main-intro-txt">Hi, I'm a web developer based in India, crafting bold, innovative, and impactful
+                designs that make a real difference.</h3>
 
         </div>
     </section>
@@ -318,33 +319,28 @@
                 opacity: 0,
                 duration: 0.5,
             }, "corners");
-            tl.from(".hero-image-inner", {
-                display: "none",
-                duration: 1
-            })
         }
         onLoadAnimation()
 
         // Looping Banner Animation
         function loopBannerImage() {
-            gsap.fromTo("#banner img",
-                {
-                    clipPath: "inset(0 0% 0 0)",
-                    scale: 1,
-                },
-                {
-                    clipPath: "inset(0 100% 0 0)",
-                    scale: 1.8,
-                    duration: 1,
-                    ease: "hop",
-                    repeat: -1,
-                    yoyo: true,
-                    repeatDelay: 2,
-                    delay: 1,
-                }
-            );
+            gsap.set("#banner img", {
+                clipPath: "inset(0 100% 0 0)",
+                scale: 1.8,
+            });
+
+            gsap.to("#banner img", {
+                clipPath: "inset(0 0% 0 0)",
+                scale: 1,
+                duration: 1.5,
+                ease: "hop",
+                yoyo: true,
+                repeat: -1,
+                repeatDelay: 2,
+            });
         }
-        loopBannerImage()
+        loopBannerImage();
+
 
 
 
