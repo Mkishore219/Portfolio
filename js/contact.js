@@ -23,6 +23,26 @@ lenisScroll()
 
 
 
+// cursorMove
+function cursorMove() {
+
+    var body = document.querySelector("body");
+    var cursor = document.querySelector("#cursor");
+
+    body.addEventListener("mousemove", function (e) {
+        gsap.to(cursor, {
+            x: e.x,
+            y: e.y,
+            duration: 1,
+            ease: "back.out"
+        })
+    })
+
+}
+cursorMove()
+
+
+
 
 
 

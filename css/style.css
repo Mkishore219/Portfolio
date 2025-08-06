@@ -1,5 +1,4 @@
 :root {
-    --gray: #f4e6d7;
     --black: #080809;
     --orangish: #f62700;
     --skills--border: #ff9d89;
@@ -50,8 +49,8 @@ p {
 }
 
 section {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
 svg,
@@ -106,7 +105,7 @@ img {
     top: 0;
     left: 0;
     z-index: 100;
-    background-color: var(--gray);
+    background-color: var(--all-page-bg-color);
     /* background-color: black; */
 }
 
@@ -123,7 +122,7 @@ img {
 }
 
 #loader-cover .loader2 {
-    background-color: var(--gray);
+    background-color: var(--all-page-bg-color);
     width: 75%;
     height: 75%;
     z-index: 102;
@@ -135,13 +134,31 @@ img {
 }
 
 
+/* #cursor  */
+#cursor {
+    height: 13px;
+    width: 13px;
+    background-color: rgb(255, 255, 255);
+    /* background-color: var(--orangish); */
+    position: fixed;
+    z-index: 100;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    translate: none; 
+    rotate: none; 
+    scale: none; 
+    transform: translate(2132px, 441px);
+}
+
+
 
 
 
 
 
 body {
-    background-color: var(--gray);
+    background-color: var(--all-page-bg-color);
     color: var(--black);
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
@@ -165,7 +182,7 @@ header {
 header .h-left,
 .h-center,
 .h-right {
-    color: var(--gray);
+    color: var(--all-page-bg-color);
     letter-spacing: .5px;
     text-transform: uppercase;
     font-family: "Aspekta 500", sans-serif;
@@ -252,7 +269,7 @@ header .h-center h1 a {
 
 section#banner {
     z-index: 30;
-    background-color: var(--gray);
+    background-color: var(--all-page-bg-color);
     position: relative;
     padding: 0;
 }
@@ -360,13 +377,14 @@ section#banner .hero-text-embed {
 
 
 
+
 /* ÷introduction */
 
-section#introduction h3 {
+ h3 {
     font-size: 5vw;
     font-weight: bold;
     text-align: center;
-    letter-spacing: 10px;
+    margin-bottom: 50px;
 }
 
 
@@ -379,12 +397,7 @@ section#work {
 }
 
 section#work h3 {
-    font-size: 10vh;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 10px;
     color: var(--all-page-bg-color);
-    margin-bottom: 200px;
 }
 
 section#work img {
@@ -416,19 +429,13 @@ section#work .all-work-btn a:hover i {
 
 /* about */
 section#about h3 {
-    font-size: 10vh;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 10px;
     color: var(--black);
-    margin-bottom: 200px;
 }
 
-section#about h4 {
+section#about h5.about-first-h5 {
     width: 50%;
-    font-size: 5vw;
     font-weight: bold;
-    letter-spacing: 10px;
+    /* letter-spacing: 10px; */
     color: var(--black);
     margin: auto;
     margin-bottom: 50px;
@@ -439,18 +446,19 @@ section#about h5 {
     font-size: 7vh;
     /* font-size: 5vw; */
     font-weight: bold;
-    letter-spacing: 10px;
+    /* letter-spacing: 10px; */
     color: var(--black);
     text-align: center;
 }
 
 section#about .abt-content-main {
     margin-top: 50px;
+    font-size: 25px;
+    text-align: center;
 }
 
-section#about .col-md-4 h6 {
-    font-size: 1.5vw;
-    text-align: center;
+section#about .abt-content-main p span{
+    color: var(--orangish);
 }
 
 section#about .col-md-4 img {
@@ -465,211 +473,6 @@ section#about .col-md-4 img {
 
 
 
-
-
-
-/* skills÷ */
-section#skills {
-    padding-top: 0;
-}
-
-section#skills .skills-txt {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-}
-
-section#skills h3 {
-    font-size: 7vh;
-    font-weight: bold;
-    letter-spacing: 10px;
-    color: var(--black);
-}
-
-section#skills h4 {
-    font-size: 1.5vw;
-    color: var(--black);
-}
-
-
-section#skills .toolbox-item-grid {
-    /* border-top: 1px solid var(--skills--border); */
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-auto-columns: 1fr;
-    display: grid;
-}
-
-section#skills .toolbox-single-item.first {
-    background-color: var(--all-page-bg-color);
-    margin-top: 0px;
-}
-
-section#skills .toolbox-single-item {
-    border-right: 1px solid var(--skills--border);
-    border-bottom: 1px solid var(--skills--border);
-    /* background-color: #080808; */
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 214px;
-    display: flex;
-    position: relative;
-}
-
-section#skills .toolbox-single-item:nth-child(1),
-section#skills .toolbox-single-item:nth-child(2),
-section#skills .toolbox-single-item:nth-child(3),
-section#skills .toolbox-single-item:nth-child(4) {
-    border-top: 1px solid var(--skills--border);
-}
-
-section#skills .toolbox-single-item:nth-child(1) {
-    border-top: none;
-}
-
-/* skills-left-border÷ */
-section#skills .skills-left-border {
-    border-left: 1px solid var(--skills--border);
-}
-
-section#skills .w-inline-block {
-    max-width: 100%;
-    display: flex;
-}
-
-section#skills a {
-    text-decoration: none;
-    transition: color .4s;
-}
-
-
-
-section#skills .converted-a:hover .toolbox-item-bg {
-    background: var(--orangish);
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg) !important;
-    transform-style: preserve-3d;
-    transition: 0.5s;
-}
-
-section#skills .converted-a:nth-child(11):hover .toolbox-item-bg,
-section#skills .converted-a:nth-child(5):hover .toolbox-item-bg,
-section#skills .converted-a:nth-child(4):hover .toolbox-item-bg {
-    background: var(--all-page-bg-color);
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg) !important;
-    transform-style: preserve-3d;
-    transition: 0.5s;
-}
-
-section#skills .converted-a:nth-child(11),
-section#skills .converted-a:nth-child(5),
-section#skills .converted-a:nth-child(4) {
-    background: var(--orangish);
-    color: var(--all-page-bg-color);
-}
-
-section#skills .converted-a:nth-child(11) svg path,
-section#skills .converted-a:nth-child(11) i,
-section#skills .converted-a:nth-child(5) i,
-section#skills .converted-a:nth-child(4) i {
-    color: var(--all-page-bg-color);
-    fill: var(--all-page-bg-color);
-}
-
-
-
-section#skills .toolbox-item-content {
-    z-index: 1;
-    position: relative;
-}
-
-section#skills .icon-1x1-xlarge {
-    justify-content: center;
-    align-items: center;
-    width: 56px;
-    height: 56px;
-    font-size: 56px;
-    line-height: 1;
-    text-decoration: none;
-    display: flex;
-}
-
-section#skills .icon-1x1-xlarge i {
-    color: var(--orangish);
-    /* color: white; */
-}
-
-section#skills .converted-a:hover .icon-1x1-xlarge i {
-    color: var(--all-page-bg-color);
-}
-
-section#skills .converted-a:nth-child(11):hover svg path,
-section#skills .converted-a:nth-child(11):hover i,
-section#skills .converted-a:nth-child(5):hover i,
-section#skills .converted-a:nth-child(4):hover i {
-    color: var(--orangish);
-    fill: var(--orangish);
-}
-
-section#skills .toolbox-item-bg {
-    z-index: 0;
-    background-color: #2e2e2e;
-    position: absolute;
-    inset: 0%;
-}
-
-section#skills .converted-a:hover svg path {
-    fill: var(--white);
-}
-
-
-
-
-/* ÷plus */
-section#skills .plus-icon-line._1 {
-    border-top: 1px solid var(--orangish);
-    width: 14px;
-    top: 6px;
-    left: 0;
-}
-
-section#skills .plus-icon-line._2 {
-    border-left: 1px solid var(--orangish);
-    height: 14px;
-    top: 7px;
-    left: 7px;
-    transform: translate(-50%, -50%);
-}
-
-section#skills .plus-icon-line {
-    position: absolute;
-}
-
-
-section#skills .plus-icon-wrap.top-right {
-    left: auto;
-    right: -7px;
-}
-
-section#skills .plus-icon-wrap {
-    z-index: 1;
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    inset: -7px auto auto -7px;
-}
-
-section#skills .plus-icon-wrap.bottom-left {
-    top: auto;
-    bottom: -8px;
-    left: -7px;
-}
-
-section#skills .last-box {
-    border-right: 1px solid var(--all-page-bg-color);
-    border-bottom: 1px solid var(--all-page-bg-color);
-}
 
 
 
@@ -697,15 +500,16 @@ footer {
 }
 
 footer h3 {
-    font-size: 6vw;
-    color: var(--gray);
+    color: var(--all-page-bg-color);
     width: 80%;
     text-align: center;
+    /* font-size: 6vw; */
+    margin-bottom: 20px;
 }
 
 footer a {
     color: var(--orangish);
-    font-size: 3.5vw;
+    font-size: 4vw;
     text-decoration: none;
 }
 
@@ -733,7 +537,7 @@ footer a:hover i {
 /* individual-page-work  */
 section#individual-page-work {
     background-color: black;
-    padding: 120px 30px;
+    padding: 120px 30px 50px 30px;
 }
 
 section#individual-page-work h3 {
@@ -742,7 +546,8 @@ section#individual-page-work h3 {
     text-align: center;
     letter-spacing: 10px;
     color: var(--all-page-bg-color);
-    padding: 300px 0;
+    /* padding: 300px 0 50px 0; */
+    padding: 200px 0 0px 0;
 }
 
 section#individual-page-work img {
@@ -774,6 +579,14 @@ section#contact {
     height: 100vh;
     width: 100%;
     /* padding-bottom: 0; */
+}
+
+section#contact .get-in-touch-txt a:hover i {
+    display: inline-block;
+    /* transform: rotate(5deg); */
+    transform: translate3d(40%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition: 0.3s;
 }
 
 section#contact .container {
@@ -877,8 +690,8 @@ section#contact .say-hi svg {
 
 /* Start of Design for Small Desktops */
 @media screen and (max-width: 1900px) {
-    section#about .col-md-4 h6 {
-        font-size: 2.5vw;
+    section#about .col-md-6 p {
+        font-size: 25px;
     }
 
     /* skills */
