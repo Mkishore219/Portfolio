@@ -276,6 +276,11 @@ section#banner {
     /* overflow: hidden; */
 }
 
+section#banner img{
+    clip-path: "inset(0 0% 0 0)",
+}
+
+
 section#banner .ban-txt {
     position: absolute;
     bottom: -70px;
@@ -655,7 +660,6 @@ section#contact .say-hi {
 section#contact .say-hi svg {
     width: 80%;
 }
-
 
 
 
