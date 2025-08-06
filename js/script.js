@@ -120,9 +120,9 @@
     }
 
     // Initialize All
-    window.addEventListener("load", () => {
-        ScrollTrigger.refresh();
-        initSplitTextAnimation();
-        handleResize();
-        revealImages("img");
-    });
+window.addEventListener("load", () => {
+    ScrollTrigger.refresh();
+    initSplitTextAnimation();
+    handleResize();
+    revealImages("img:not(#banner img)");
+});
