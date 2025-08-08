@@ -13,7 +13,6 @@
         gsap.ticker.add(time => lenis.raf(time * 1000));
         gsap.ticker.lagSmoothing(0);
     }
-    initLenis();
 
     // Custom Cursor
     function initCursor() {
@@ -29,14 +28,13 @@
             });
         });
     }
-    initCursor();
 
     // SplitText Animation
     function animateSplitText(selector) {
         document.querySelectorAll(selector).forEach(el => {
             if (!el || el.offsetParent === null) return;
 
-            // Clean previous instance if exists
+            // Revert previous split instance if exists
             if (el._splitTextInstance) {
                 el._splitTextInstance.revert();
             }
@@ -65,7 +63,6 @@
         });
     }
 
-    // Trigger animation once fonts are ready
     function initSplitTextAnimation() {
         const selector = "h3, h4, h5, p";
         if (document.fonts) {
@@ -75,7 +72,7 @@
         }
     }
 
-    // Re-initialize on resize/orientation
+    // Reinitialize SplitText and refresh ScrollTrigger on resize/orientation
     function handleResize() {
         let lastWidth = window.innerWidth;
         let resizeTimeout;
@@ -119,10 +116,12 @@
         });
     }
 
-    // Initialize All
-window.addEventListener("load", () => {
-    ScrollTrigger.refresh();
-    initSplitTextAnimation();
-    handleResize();
-    revealImages("img:not(#banner img)");
-});
+    // Initialize All on Page Load
+    window.addEventListener("load", () => {
+        ScrollTrigger.refresh();
+        initLenis();
+        initCursor();
+        initSplitTextAnimation();
+        handleResize();
+        revealImages("img:not(#banner img)");
+    });
