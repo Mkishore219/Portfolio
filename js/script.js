@@ -50,12 +50,12 @@
             if (split.lines.length) {
                 gsap.from(split.lines, {
                     y: 150,
-                    duration: 1,
+                    duration: 0.8,
                     ease: "hop",
                     stagger: 0.1,
                     scrollTrigger: {
                         trigger: el,
-                        start: "top 80%",
+                        start: "top 90%",
                         toggleActions: "play none none reverse"
                     }
                 });
@@ -104,11 +104,11 @@
                 },
                 {
                     clipPath: "inset(0 0 0% 0)",
-                    duration: 1.6,
+                    duration: 0.8,
                     ease: "hop",
                     scrollTrigger: {
                         trigger: img,
-                        start: "top 80%",
+                        start: "top 90%",
                         toggleActions: "play none none reverse"
                     }
                 }
